@@ -41,7 +41,7 @@ class App extends React.Component {
     this.setState({
       adoptedPets: Object.assign({}, this.state.adoptedPets, {
         petId
-      }
+      })
     });
   }
 
