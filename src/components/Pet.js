@@ -4,10 +4,12 @@ class Pet extends React.Component {
   handleAdoptPet = () => this.props.onAdoptPet(this.props.pet.id)
 
   render() {
+    var { pet: {name, type, gender, age, weight}, isAdopted} = this.props;
     return (
       <div className="card">
         <div className="content">
           <a className="header">
+          {name}
             {/*'♀' OR '♂' */}
             PET NAME
           </a>
@@ -20,8 +22,7 @@ class Pet extends React.Component {
           </div>
         </div>
         <div className="extra content">
-        {isAdopted
-          ?
+        {isAdopted ?
           <button className="ui disabled button">Already adopted</button>
           :
           <button
