@@ -12,7 +12,7 @@ class PetBrowser extends React.Component {
         isAdopted={this.props.adoptedPets.includes(pet.id)}
         />
     )
-    
+
     return <div className="ui cards">{renderPets}</div>
   }
 }
