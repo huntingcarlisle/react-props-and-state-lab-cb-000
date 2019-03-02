@@ -16,10 +16,10 @@ class App extends React.Component {
     }
   }
 
-  handleChangeFilterType = (selectedType) => {
+  handleChangeFilterType = type => {
     this.setState({
       filters: Object.assign({}, this.state.filters, {
-        type: selectedType,
+        type: type,
       })
     })
   }
