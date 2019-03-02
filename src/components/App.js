@@ -26,7 +26,7 @@ class App extends React.Component {
   handleFind = () => {
     var url = '/api/pets';
 
-    if (this.state.filters.type != 'all') {
+    if (this.state.filters.type !== 'all') {
       url +=`?type=${this.state.filters.type}`;
     }
 
@@ -52,7 +52,9 @@ class App extends React.Component {
               />
             </div>
             <div className="twelve wide column">
-              <PetBrowser />
+              <PetBrowser 
+              
+              />
             </div>
           </div>
         </div>
