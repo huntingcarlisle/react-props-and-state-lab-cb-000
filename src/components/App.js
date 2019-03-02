@@ -15,8 +15,12 @@ class App extends React.Component {
     }
   }
 
-  handleType = () => {
-
+  handleType = (selectedType) => {
+    this.setState({
+      filters: Object.assign({}, this.state.filters, {
+        type: selectedType,
+      })
+    })
   }
 
   handleFind = () => {
@@ -32,7 +36,9 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters onChangeType={this.handleType}
+              <Filters
+              filters={this.state.filters}
+              onChangeType={this.handleType}
               onFindPetsClick={this.handleFind}
               />
             </div>
