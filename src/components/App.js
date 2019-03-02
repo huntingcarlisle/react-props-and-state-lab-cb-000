@@ -36,6 +36,12 @@ class App extends React.Component {
 
   }
 
+  handleAdoption = petID => {
+    this.setState({
+      adoptedPets: [...this.state.adoptedPets, petID],
+    })
+  }
+
   render() {
     return (
       <div className="ui container">
@@ -53,7 +59,9 @@ class App extends React.Component {
             </div>
             <div className="twelve wide column">
               <PetBrowser
-
+              pets={this.state.pets}
+              adoptedPets={this.state.adoptedPets}
+              onAdoptPet={this.handleAdoption}
               />
             </div>
           </div>
