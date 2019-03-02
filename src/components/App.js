@@ -53,16 +53,16 @@ class App extends React.Component {
           <div className="ui grid">
             <div className="four wide column">
               <Filters
-              filters={this.state.filters}
-              onChangeType={this.handleChangeFilterType}
-              onFindPetsClick={this.fetchPets}
+                filters={this.state.filters}
+                onChangeType={this.handleChangeFilterType}
+                onFindPetsClick={this.fetchPets}
               />
             </div>
             <div className="twelve wide column">
               <PetBrowser
-              pets={this.state.pets}
-              adoptedPets={this.state.adoptedPets}
-              onAdoptPet={this.handleAdoptPet}
+                 pets={this.state.pets}
+                 adoptedPets={this.state.adoptedPets}
+                 onAdoptPet={this.handleAdoptPet}
               />
             </div>
           </div>
