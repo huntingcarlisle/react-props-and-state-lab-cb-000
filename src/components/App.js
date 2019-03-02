@@ -38,12 +38,11 @@ class App extends React.Component {
   }
 
   handleAdoptPet = petId => {
-    this.setState({
-      adoptedPets: Object.assign({}, this.state.adoptedPets, {
-        petId
-      })
+    const pets = this.state.pets.map(p => {
+      return p.id === petId ? { ...p, isAdopted: true } : p;
     });
-  }
+    this.setState({ pets });
+  };
 
   render() {
     return (
