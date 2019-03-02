@@ -19,6 +19,10 @@ class App extends React.Component {
 
   }
 
+  handleFind = () => {
+
+  }
+
   render() {
     return (
       <div className="ui container">
@@ -28,7 +32,9 @@ class App extends React.Component {
         <div className="ui container">
           <div className="ui grid">
             <div className="four wide column">
-              <Filters onChangeType={this.handleType} />
+              <Filters onChangeType={this.handleType}
+              onFindPetsClick={this.handleFind}
+              />
             </div>
             <div className="twelve wide column">
               <PetBrowser />
