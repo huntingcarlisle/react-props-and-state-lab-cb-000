@@ -1,7 +1,7 @@
 import React from 'react'
 
 class Filters extends React.Component {
-  handleTypeChange = (event) => {
+  handleFilterTypeChange = (event) => {
     this.props.onChangeType(event.target.value)
   }
 
@@ -14,7 +14,7 @@ class Filters extends React.Component {
           name="type"
           id="type"
           value={this.props.filters.type}
-          onChange={this.handleTypeChange}
+          onChange={this.handleFilterTypeChange}
           >
             <option value="all">All</option>
             <option value="cat">Cats</option>
