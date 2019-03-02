@@ -16,7 +16,7 @@ class App extends React.Component {
     }
   }
 
-  handleType = (selectedType) => {
+  handleChangeFilterType = (selectedType) => {
     this.setState({
       filters: Object.assign({}, this.state.filters, {
         type: selectedType,
@@ -24,7 +24,7 @@ class App extends React.Component {
     })
   }
 
-  handleFind = () => {
+  fetchPets = () => {
     var url = '/api/pets';
 
     if (this.state.filters.type !== 'all') {
@@ -54,8 +54,8 @@ class App extends React.Component {
             <div className="four wide column">
               <Filters
               filters={this.state.filters}
-              onChangeType={this.handleType}
-              onFindPetsClick={this.handleFind}
+              onChangeType={this.handleChangeFilterType}
+              onFindPetsClick={this.fetchPets}
               />
             </div>
             <div className="twelve wide column">
