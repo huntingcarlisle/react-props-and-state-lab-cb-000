@@ -6,7 +6,7 @@ class Pet extends React.Component {
 
   render() {
     const { pet: { name, type, gender, age, weight }, isAdopted} = this.props;
-    
+
     return (
       <div className="card">
         <div className="content">
