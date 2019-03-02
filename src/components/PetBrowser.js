@@ -9,7 +9,7 @@ class PetBrowser extends React.Component {
         pet={pet}
         key={pet.id}
         onAdoptPet={this.props.onAdoptPet}
-        isAdopted={this.props.adoptedPets.includes(pet.id)}
+        // isAdopted={this.props.adoptedPets.includes(pet.id)}
       />
     )
 
