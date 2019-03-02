@@ -16,7 +16,7 @@ class Pet extends React.Component {
           </div>
           <div className="description">
             <p>Age: {age}</p>
-            <p>Weight: PET WEIGHT</p>
+            <p>Weight: {weight}</p>
           </div>
         </div>
         <div className="extra content">
